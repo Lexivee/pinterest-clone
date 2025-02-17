@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <title>Create Pin</title>
+</head>
+<body>
+    <h1>Create New Pin</h1>
+    <form th:action="@{/pins}" method="post">
+        <div>
+            <label>Title:</label>
+            <input type="text" name="title" th:value="${pin.title}"/>
+        </div>
+        <div>
+            <label>Description:</label>
+            <textarea name="description" th:text="${pin.description}"></textarea>
+        </div>
+        <div>
+            <label>Image URL:</label>
+            <input type="text" name="imageUrl" th:value="${pin.imageUrl}"/>
+        </div>
+        <div>
+            <button type="submit">Create</button>
+        </div>
+    </form>
+</body>
+</html>
